@@ -9,7 +9,7 @@ export default defineConfig({
       name: 'cart-app',
       filename: 'cartEntry.js',
       remotes: {
-        mainApp: 'http://localhost:5001/assets/mainAppEntry.js'
+        mainApp: 'https://main-app-eta.vercel.app/assets/mainAppEntry.js'
       },
       exposes: {
         './Cart.vue': './src/components/Cart.vue'
