@@ -1,19 +1,49 @@
 # cart-app
 
-This is a remote microfrontend that provides a shopping cart component to the `main-app` using Module Federation.
+Cart microfrontend responsible for state management and user interactions within the microfrontend system.
 
-## Features
+---
 
-- Displays products in the cart
-- Listens for changes in the global Pinia store
-- Fully remote component loaded dynamically
-- Works as part of a microfrontend architecture
+## Role
 
-## Technologies
+- Manages cart state (add, remove, update items)
+- Handles business logic related to cart operations
+- Synchronizes user interactions with application state
+- Owns the cart domain within the system
+
+---
+
+## Integration
+
+- Exposed as a remote module via Module Federation
+- Loaded dynamically by the host application (`main-app`)
+- Designed to be independently deployable
+- Loaded via remote entry URL at runtime
+- Shares and synchronizes state with host and other microfrontends when required
+- Designed to be consumed by multiple host applications
+- Versioned and integrated via Module Federation contracts
+
+---
+
+## Tech Stack
 
 - Vue 3
+- TypeScript
 - Vite
-- Pinia
-- Module Federation (originjs plugin)
+- Module Federation (vite-plugin-federation)
 
-## Project structure
+---
+
+## Development
+
+```bash
+yarn
+yarn dev
+```
+
+Application runs at http://localhost:3002
+
+## Part of system
+
+This application is part of the microfrontend system:  
+[Microfrontends Vue Lab](https://github.com/Artem-Makarchenko-Dev/microfrontends-vue-lab)
